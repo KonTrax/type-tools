@@ -1,1 +1,2 @@
-export type NIL = null | undefined
+export * from './core'
+export * from './comparison'
