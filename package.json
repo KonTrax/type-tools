@@ -1,0 +1,21 @@
+{
+  "name": "@ktb/type-tools",
+  "description": "Typescript type utilities",
+  "version": "0.1.0",
+  "author": "KonTrax",
+  "license": "ISC",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KonTrax/type-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KonTrax/type-tools/issues"
+  },
+  "homepage": "https://github.com/KonTrax/type-tools#readme"
+}
