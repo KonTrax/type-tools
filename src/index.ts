@@ -1,4 +1,5 @@
 export * from './core'
+export * from './mapped-types'
 export * from './comparison'
 export * from './function'
 export * from './promise'
