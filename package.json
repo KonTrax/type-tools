@@ -5,7 +5,9 @@
   "author": "KonTrax",
   "license": "ISC",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/KonTrax/type-tools/issues"
   },
-  "homepage": "https://github.com/KonTrax/type-tools#readme"
+  "homepage": "https://github.com/KonTrax/type-tools#readme",
+  "devDependencies": {
+    "typescript": "^3.3.0-dev.20181214"
+  }
 }
