@@ -1,2 +1,5 @@
 export * from './core'
 export * from './comparison'
+export * from './function'
+export * from './promise'
+export * from './tuple'

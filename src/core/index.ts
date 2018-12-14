@@ -1,5 +1,3 @@
-export type NIL = null | undefined
+export * from './internal'
 
-export type TRU = true
-export type FAL = false
-export type BOL = TRU | FAL
+export type NIL = null | undefined

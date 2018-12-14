@@ -1,8 +1,6 @@
 type NEV = never
 type UNK = unknown
 
-//==============================================================================
-
 export type IsValue <T, THEN = T, ELSE = NEV> =
 		IsSpecial<T, ELSE, THEN>
 
