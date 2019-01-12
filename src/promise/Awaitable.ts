@@ -8,4 +8,4 @@
 export type Awaitable <T> =
 		| T
 		| Promise<T>
-		// | PromiseLike<T> // NOTE: Disabled for now
+		| PromiseLike<T>

@@ -5,6 +5,6 @@ import { PropType } from './PropType'
  * @param BaseType -
  */
 export type KeyByValue <T, BaseType> =
-		{ [K in keyof T] :
+		{ [K in keyof T] -?:
 				PropType<T, K> extends BaseType ? K : never
 		}[keyof T]
