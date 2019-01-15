@@ -29,5 +29,6 @@
 			// "node",
 		]
 	},
-	"include": ["src"]
+	"include": ["src"],
+	"exclude": ["**/_local"]
 }
