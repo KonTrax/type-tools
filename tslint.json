@@ -1,0 +1,38 @@
+{
+  "defaultSeverity": "warn",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rulesDirectory": [],
+  "jsRules": {},
+  "rules": {
+    // "no-any": true,
+    "no-unsafe-any": true,
+    "no-reference": true,
+    "no-implicit-dependencies": true,
+    "no-default-export": true,
+    "no-default-import": true,
+
+    "comment-format": false,
+
+    "align": false,
+
+    "quotemark": [true, "single"],
+    "semicolon": false,
+
+    "eofline": true,
+
+    "indent": [true, "tabs", 2],
+    "linebreak-style": [true, "LF"],
+    "one-line": false,
+    "whitespace": [true
+      ,"check-decl"
+      ,"check-branch"
+      ,"check-operator"
+      ,"check-typecast"
+    ],
+    "typedef-whitespace": false,
+
+    "comma_fix": false
+  }
+}

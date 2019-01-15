@@ -1,0 +1,13 @@
+{
+  "extends": ["../tslint.json"],
+  "rules": {
+    "ban-types": false,
+    "trailing-comma": false,
+    "interface-over-type-literal": false,
+    "prefer-const": false,
+    "no-implicit-dependencies": false,
+    "ordered-imports": false,
+
+    "comma_fix": false
+  }
+}
