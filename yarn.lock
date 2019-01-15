@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@ktb/type-compare/-/type-compare-0.1.3.tgz#498eb6a5ca76f7a5497226ece292f00f6e6c20e1"
   integrity sha512-Oaa8d36eV2akZEFq7eMrHHrbLANbTFicgP45rtjsKvg5plG20226fzkVBFlqgVx69iCnCF+Wp8jNPvmLr8RSOQ==
 
-"@ktb/type-test@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ktb/type-test/-/type-test-0.1.0.tgz#6c92cf0840eff2c55496944dff1254f708aebc39"
-  integrity sha512-7DpSxK9xX94utjHPFWzwgBDphjhf+lwntGvyneCquPZpsxyz4pTvoUc6e5WKmNElQVbnrtxZGG+jZht7r3dDcA==
+"@ktb/type-test@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@ktb/type-test/-/type-test-0.1.1.tgz#8438d360be87846d7b19bd7519eb6fe69860cc95"
+  integrity sha512-5dFX/Q/StZ52hkYeyCW0M+O9dLJkwCIq2RJSjUnd/pBi/jGP37LEHkSLUm3D/AndOhmS8L6tLIum/SnlxtWpVQ==
   dependencies:
     "@ktb/type-compare" "^0.1.3"
 
