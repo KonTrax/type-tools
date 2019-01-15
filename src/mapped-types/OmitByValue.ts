@@ -1,5 +1,5 @@
-import { OmitByKey } from './OmitByKey'
 import { KeyByValue } from './KeyByValue'
+import { OmitByKey } from './OmitByKey'
 
 /**
  * From `T` omit properties of type `BaseType`
