@@ -7,6 +7,8 @@
     "prefer-const": false,
     "no-implicit-dependencies": false,
     "ordered-imports": false,
+    "no-shadowed-variable": false,
+    "space-before-function-paren": false,
 
     "comma_fix": false
   }
