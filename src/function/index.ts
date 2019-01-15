@@ -1,3 +1,4 @@
+import { Yield } from '../generator'
 import { Awaitable } from '../promise'
 
 /**
@@ -49,3 +50,14 @@ export type AsyncFunc <A extends any[] = any[], R = any> =
  */
 export type AwaitableFunc <A extends any[] = any[], R = any> =
 		Func<A, Awaitable<R>>
+
+/**
+ * Function compatible with the `yield` statement
+ *
+ * - Compatible with `yield`
+ *
+ * @param {any[]} A - Arguments expected
+ * @param {any}   R - Return/yield type
+ */
+export type GeneratorFunc <A extends any[] = any[], R = any> =
+		Func<A, Yield<R>>
