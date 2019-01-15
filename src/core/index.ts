@@ -1,4 +1,5 @@
 export * from './internal'
+export * from './TypeName'
 
 import * as JS from './js'
 import * as TS from './ts'
