@@ -1,1 +1,1 @@
-export type AnyTuple = [unknown?, ...unknown[]]
+export type AnyTuple = [any?, ...any[]]
