@@ -1,6 +1,6 @@
 import expect, {TRU, FAL, Expect, Equals} from '@ktb/type-test'
 
-import { AwaitableType } from '@src/promise/AwaitableType'
+import { PromiseType } from '@src/promise/PromiseType'
 
 //==============================================================================
 
@@ -15,7 +15,7 @@ let { TRU, FAL } = expect
 	// type  INVALID = typeof INVALID
 
 	// @ts-ignore
-	type Test <T> = AwaitableType<T>
+	type Test <T> = PromiseType<T>
 	// type Constraint = any[]
 
 	// function exp <T extends Constraint> (t ?:T) :Expect<Test<T>>

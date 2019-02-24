@@ -1,2 +1,1 @@
-export * from './AwaitableType'
-export * from './DeepAwaitableType'
+export * from './PromiseType'
