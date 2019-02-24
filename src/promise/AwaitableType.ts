@@ -1,5 +1,7 @@
 /**
- * Unwrap type if wrapped in a `Promise`
+ * Unwrap type if wrapped in a `Promise` (shallow)
+ *
+ * - Uses `PromiseLike`
  *
  * @example
  * type T0 = AwaitableType<'A'>;              // 'A'
