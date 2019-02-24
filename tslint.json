@@ -13,6 +13,9 @@
     "no-default-export": true,
     "no-default-import": true,
 
+    "trailing-comma": false,
+    "space-before-function-paren": false,
+
     "comment-format": false,
 
     "align": false,
