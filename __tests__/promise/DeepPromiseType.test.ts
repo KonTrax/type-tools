@@ -1,6 +1,6 @@
 import expect, {TRU, FAL, Expect, Equals} from '@ktb/type-test'
 
-import { DeepAwaitableType } from '@src/promise/DeepAwaitableType'
+import { DeepPromiseType } from '@src/promise/DeepPromiseType'
 
 //==============================================================================
 
@@ -15,7 +15,7 @@ let { TRU, FAL } = expect
 	// type  INVALID = typeof INVALID
 
 	// @ts-ignore
-	type Test <T> = DeepAwaitableType<T>
+	type Test <T> = DeepPromiseType<T>
 	// type Constraint = any[]
 
 	// function exp <T extends Constraint> (t ?:T) :Expect<Test<T>>
