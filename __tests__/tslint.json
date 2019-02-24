@@ -10,6 +10,8 @@
     "no-shadowed-variable": false,
     "space-before-function-paren": false,
 
+    "array-type": false,
+
     "comma_fix": false
   }
 }
