@@ -1,5 +1,4 @@
 export * from './AsyncFunc'
-export * from './AwaitableFunc'
 export * from './BoundFunc'
 export * from './Func'
 export * from './GeneratorFunc'
