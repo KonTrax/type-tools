@@ -7,7 +7,7 @@ import { Head } from '@src/tuple/Head'
 let { TRU, FAL } = expect
 
 //==============================================================================
-;{ // CASE: TypeNameOf & TypeNameType works correctly
+;{ // CASE: Works correctly
 
 	//=== SETUP ===
 

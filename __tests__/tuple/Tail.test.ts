@@ -7,7 +7,7 @@ import { Tail } from '@src/tuple/Tail'
 let { TRU, FAL } = expect
 
 //==============================================================================
-;{ // CASE: TypeNameOf & TypeNameType works correctly
+;{ // CASE: Works correctly
 
 	//=== SETUP ===
 
