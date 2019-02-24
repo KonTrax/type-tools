@@ -1,3 +1,1 @@
-import * as _OMK from './OmitByKey'
-
-export import Omit = _OMK.OmitByKey
+export { OmitByKey as Omit } from './OmitByKey'
