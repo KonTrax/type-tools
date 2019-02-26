@@ -10,6 +10,9 @@
     "no-shadowed-variable": false,
     "space-before-function-paren": false,
 
+    "unified-signatures": false,
+    "callable-types": false,
+
     "array-type": false,
 
     "comma_fix": false
