@@ -1,7 +1,7 @@
 import { MergeKeys } from './MergeKeys'
 
 /**
- * Assign properties from `T2` to `T1` (just like object assign)
+ * Assign properties from `T2` to `T1` (just like Object.assign)
  *
  * @param {any} T1 - Original props
  * @param {any} T2 - New props
