@@ -1,6 +1,5 @@
 export * from './AssignProps'
 export * from './KeyByValue'
-export * from './MergeKeys'
 export * from './MergeProps'
 export * from './Omit'
 export * from './OmitByKey'

@@ -3,7 +3,7 @@ import expect, {TRU, FAL} from '@ktb/type-test'
 import {
 	Keys  as Target,
 	KeysU as TargetU,
-} from '@src/mapped-types/Keys'
+} from '@src'
 
 //==============================================================================
 //=== SETUP ===

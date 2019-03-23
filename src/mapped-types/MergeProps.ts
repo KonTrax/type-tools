@@ -1,4 +1,4 @@
-import { MergeKeys } from './MergeKeys'
+import { MergeKeys } from '../keys/MergeKeys'
 
 /**
  * Extracts and merges props of all types in union `T`
