@@ -1,4 +1,4 @@
-import { KeyByValue } from './KeyByValue'
+import { KeysByValue } from '../keys/KeysByValue'
 import { OmitByKey } from './OmitByKey'
 
 /**
@@ -8,5 +8,5 @@ import { OmitByKey } from './OmitByKey'
  * @param BaseType -
  */
 export type OmitByValue <T, BaseType> = T extends any
-		? OmitByKey<T, KeyByValue<T, BaseType>>
+		? OmitByKey<T, KeysByValue<T, BaseType>>
 		: never

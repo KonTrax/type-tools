@@ -1,6 +1,6 @@
 import expect, {TRU, FAL} from '@ktb/type-test'
 
-import { KeyByValue as Target } from '@src/mapped-types/KeyByValue'
+import { KeysByValue as Target } from '@src'
 
 //==============================================================================
 //=== SETUP ===

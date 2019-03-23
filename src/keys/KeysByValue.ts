@@ -1,4 +1,4 @@
-import { PropType } from './PropType'
+import { PropType } from '../mapped-types/PropType'
 
 /**
  * From `T` get keys of properties whose type extends `BaseType`
@@ -8,7 +8,7 @@ import { PropType } from './PropType'
  *
  * // TODO: Review how to handle unions (should T be intersected?)
  */
-export type KeyByValue <T, BaseType> =
+export type KeysByValue <T, BaseType> =
 		{ [K in keyof T] -?:
 				PropType<T, K> extends BaseType ? K : never
 		}[keyof T]
