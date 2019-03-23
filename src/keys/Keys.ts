@@ -1,3 +1,5 @@
+import { UnionToIntersection } from '../union/UnionToIntersection'
+
 /**
  * Extracts keys of type `T`
  *
@@ -15,3 +17,12 @@ export type Keys <T> = keyof T
 export type KeysU <T> = T extends any
 		? Keys<T>
 		: never
+
+/**
+ * Extracts and merges keys of all types in intersection of union `T`
+ *
+ * - Intersects
+ *
+ * @param T - union of types from which to merge keys
+ */
+export type KeysI <T> = Keys<UnionToIntersection<T>>
