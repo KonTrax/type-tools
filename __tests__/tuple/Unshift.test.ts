@@ -2,7 +2,7 @@ import expect, {TRU, FAL, Expect} from '@ktb/type-test'
 
 import { Unshift } from '@src/tuple/Unshift'
 
-import { Primitive } from '@src'
+import { Primitive } from '@src/core'
 
 //==============================================================================
 
@@ -97,10 +97,11 @@ let { TRU, FAL } = expect
 		;TRU = expStrict<(() => void), IN_B>().equals<EXP>()
 	}
 
-	;{type EXP = INVALID_STRICT<[IN_B, ...any[]]>
-		;TRU = expStrict<object,    IN_B>().equals<EXP>()
-		;TRU = expStrict<Object,    IN_B>().equals<EXP>()
-		;TRU = expStrict<{},        IN_B>().equals<EXP>()
+	// ;{type EXP = INVALID_STRICT<[IN_B, ...any[]]>
+	;{type EXP = INVALID_STRICT<[IN_B, ...unknown[]]>
+		;TRU = expStrict<object,    IN_B>().equals<EXP>() // Changed in TS 3.4
+		;TRU = expStrict<Object,    IN_B>().equals<EXP>() // Changed in TS 3.4
+		;TRU = expStrict<{},        IN_B>().equals<EXP>() // Changed in TS 3.4
 	}
 
 	//=== TESTS - END ===

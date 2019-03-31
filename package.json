@@ -38,6 +38,6 @@
     "@ktb/type-test": "^0.1.1",
     "rimraf": "^2.6.2",
     "tslint": "^5.12.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.4.1"
   }
 }
