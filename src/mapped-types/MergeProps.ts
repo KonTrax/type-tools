@@ -18,11 +18,10 @@ import { KeysI } from '../keys/Keys'
  * - union:   `{ a :1 } | { readonly a :2 }`
  * - becomes: `{ readonly a :1 | 2 }`
  *
- * @deprecated use `PropsI`
- *
  * @param T - union of types from which to merge props
  */
 export type MergeProps <T /*extends object*/> =
+		[T] extends [never] ? {} :
 		{ [K in KeysI<T>]: T extends any ?
 				[keyof T] extends [never]                    ? never :
 				[T]       extends [{ [P1 in K]  :infer V1 }] ? V1    :

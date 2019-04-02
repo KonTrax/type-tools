@@ -209,17 +209,24 @@ let { TRU, FAL, equals: EQ } = expect
 	}
 
 	;{TRU = EQ<EXP, Target<IN>>()
-		type EXP = { a :1 | 2, b :3 }
+		type EXP = { a :1 | 2, b :2 }
 		type IN  =
 				| { a  :1 }
-				| { a ?:2, b  :3 }
+				| { a ?:2, b  :2 }
 	}
 
 	;{TRU = EQ<EXP, Target<IN>>()
-		type EXP = { a ?:1 | 2, b :3 }
+		type EXP = { a :1 | 2, b :1 | 2 }
+		type IN  =
+				| { a  :1, b ?:1 }
+				| { a ?:2, b  :2 }
+	}
+
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a ?:1 | 2, b :2 }
 		type IN  =
 				| { a ?:1 }
-				| { a ?:2, b  :3 }
+				| { a ?:2, b  :2 }
 	}
 
 	//=== TESTS - END ===
