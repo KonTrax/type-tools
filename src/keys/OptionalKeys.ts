@@ -5,12 +5,11 @@
  * @param T - type from which to extract keys
  * @param K -
  */
-type _OptionalKeys <T /*extends object*/, K extends keyof T> =
-		Exclude<K,
-			K extends any
-				? { [P in K] -?:T extends Record<K, T[K]> ? K : never }[K]
-				: never
-		>
+type _OptionalKeys <T /*extends object*/, K extends keyof T> = Exclude<K,
+		K extends any
+			? { [P in K] -?:T extends { [_ in K] -?:T[K] } ? K : never }[K]
+			: never
+>
 
 /**
  * Extracts optional keys of type `T`
