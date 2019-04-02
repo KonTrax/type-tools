@@ -147,10 +147,79 @@ let { TRU, FAL, equals: EQ } = expect
 	//=== TESTS - General ===
 
 	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a  :1 | 2 | undefined }
+		type IN  =
+				| { a  :1 }
+				| { a  :2 | undefined }
+	}
+
+	//=== TESTS - General ===
+
+	;{TRU = EQ<EXP, Target<IN>>()
 		type EXP = { readonly a :1 | 2, readonly b :1 | 2 }
 		type IN  =
 				| {          a  :1,          b  :1 }
 				| { readonly a  :2, readonly b ?:2 }
+	}
+
+	//=== TESTS - END ===
+
+	//----------------------------------------------------------------------------
+
+	//=== TESTS - General ===
+
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a :1, b :1 }
+		type IN  =
+				| { a :1 }
+				| { a :1, b  :1 }
+	}
+
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a :1 | 2, b :3 }
+		type IN  =
+				| { a :1 }
+				| { a :2, b  :3 }
+	}
+
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a :1 | 2, b :2, c :2 }
+		type IN  =
+				| { a :1 }
+				| { a :2, b :2, c :2 }
+	}
+
+	//=== TESTS - General ===
+
+	/// CASE: Handles union of both empty and non-empty objects
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { b :3 }
+		type IN  =
+				| {}
+				| { b :3 }
+	}
+
+	//=== TESTS - General ===
+
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a :1, b ?:1 }
+		type IN  =
+				| { a :1 }
+				| { a :1, b  ?:1 }
+	}
+
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a :1 | 2, b :3 }
+		type IN  =
+				| { a  :1 }
+				| { a ?:2, b  :3 }
+	}
+
+	;{TRU = EQ<EXP, Target<IN>>()
+		type EXP = { a ?:1 | 2, b :3 }
+		type IN  =
+				| { a ?:1 }
+				| { a ?:2, b  :3 }
 	}
 
 	//=== TESTS - END ===

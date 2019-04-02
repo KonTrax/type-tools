@@ -23,7 +23,9 @@ import { KeysI } from '../keys/Keys'
  * @param T - union of types from which to merge props
  */
 export type MergeProps <T /*extends object*/> =
-		{ [K in KeysI<T>] :
-				T extends { [P1 in K]  :infer V1} ? V1 :
-				T extends { [P2 in K] ?:infer V2} ? V2 : never
+		{ [K in KeysI<T>]: T extends any ?
+				[keyof T] extends [never]                    ? never :
+				[T]       extends [{ [P1 in K]  :infer V1 }] ? V1    :
+				[T]       extends [{ [P2 in K] ?:infer V2 }] ? V2    : never
+			: never
 		}
