@@ -12,6 +12,7 @@
     "no-implicit-dependencies": true,
     "no-default-export": true,
     "no-default-import": true,
+    "no-namespace": false,
 
     "trailing-comma": false,
     "space-before-function-paren": false,

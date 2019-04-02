@@ -9,6 +9,7 @@
     "ordered-imports": false,
     "no-shadowed-variable": false,
     "space-before-function-paren": false,
+    "import-spacing": false,
 
     "unified-signatures": false,
     "callable-types": false,
