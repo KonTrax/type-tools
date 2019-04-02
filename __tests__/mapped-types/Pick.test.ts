@@ -10,16 +10,19 @@ import {
 
 let { TRU, FAL, equals: EQ } = expect
 
+// Alias of builtin version
 type Target <T, K extends keyof T> = Pick<T, K>
 
 //==============================================================================
 //=== TESTS ===
 
-;{//============================================================================
+namespace Single
+{//=============================================================================
 
-	//=== TESTS - Special Types ===
+//==============================================================================
+//=== Special Types ===
 
-	/// CASE: Should operate identical to builtin `Pick` with non-union types
+	/// CASE: Should operate identical to builtin version (Target) with non-union types
 	;{TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
 		type EXP = {
@@ -28,41 +31,105 @@ type Target <T, K extends keyof T> = Pick<T, K>
 		}
 		type IN  = any
 	}
-	/// CASE: Should operate identical to builtin `Pick` with non-union types
+	/// CASE: Should operate identical to builtin version (Target) with non-union types
 	;{TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
 		type EXP = unknown
 		type IN  = unknown
 	}
-	/// CASE: Should operate identical to builtin `Pick` with non-union types
+	/// CASE: Should operate identical to builtin version (Target) with non-union types
 	;{TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
 		type EXP  = {}
 		type IN   = never
 	}
 
-	//=== TESTS - General ===
+//===
+//==============================================================================
+//=== Special Objects ===
 
-	/// CASE: Should operate identical to builtin `Pick` with non-union types
+	/// CASE: Should operate identical to builtin version (Target) with non-union types
 	;{TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
 		type EXP = {}
 		type IN  = {}
 	}
-	/// CASE: Should operate identical to builtin `Pick` with non-union types
+	/// CASE: Should operate identical to builtin version (Target) with non-union types
 	;{TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
 		type EXP = {}
 		type IN  = object
 	}
-	/// CASE: Should operate identical to builtin `Pick` with non-union types
+	/// CASE: Should operate identical to builtin version (Target) with non-union types
 	;{TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
 		type EXP = Object
 		type IN  = Object
 	}
 
-	//=== TESTS - General ===
+//===
+//==============================================================================
+//=== Modifiers ===
+
+	//=== Normal ===
+
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { a  :1 }
+		type IN   = { a  :1 }
+	}
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { a  :1 | undefined }
+		type IN   = { a  :1 | undefined }
+	}
+
+	//=== Optional ===
+
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { a ?:1 }
+		type IN   = { a ?:1 }
+	}
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { a ?:1 }
+		type IN   = { a ?:1 | undefined }
+	}
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { a ?:1 | undefined }
+		type IN   = { a ?:1 | undefined }
+	}
+
+	//=== Readonly ===
+
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { readonly a  :1 }
+		type IN   = { readonly a  :1 }
+	}
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { readonly a  :1 | undefined }
+		type IN   = { readonly a  :1 | undefined }
+	}
+	;{TRU = EQ<EXP, Target <IN, 'a'>>()
+		TRU = EQ<EXP, TargetU<IN, 'a'>>()
+		type EXP  = { readonly a ?:1 }
+		type IN   = { readonly a ?:1 | undefined }
+	}
+
+//===
+//==============================================================================
+
+}//=============================================================================
+
+namespace Unions
+{//=============================================================================
+
+//==============================================================================
+//=== General ===
 
 	/// CASE: Should operate identical to builtin `Pick` with union types and `never` as K
 	;{TRU = EQ<EXP, Target <IN_A, IN_B>>()
@@ -89,14 +156,9 @@ type Target <T, K extends keyof T> = Pick<T, K>
 				| {        b :22, c :23 }
 	}
 
-	//=== TESTS - END ===
-
-}//=============================================================================
-
+//===
 //==============================================================================
-//=== TESTS - TargetU only ===
-
-;{//============================================================================
+//=== TargetU only ===
 
 	//=== TESTS - General ===
 
@@ -145,6 +207,10 @@ type Target <T, K extends keyof T> = Pick<T, K>
 				| { a  :2, b ?:3 }
 	}
 
-	//=== TESTS - END ===
+//===
+//==============================================================================
 
 }//=============================================================================
+
+//===
+//==============================================================================

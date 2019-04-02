@@ -2,6 +2,7 @@
  * Make all properties of types in union `T` optional
  *
  * - Distributes
+ * - Builtin version already distributes but included for consistency
  *
  * @param T - union of types
  */
