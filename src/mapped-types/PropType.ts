@@ -11,7 +11,7 @@ import { KeysU } from '../keys/Keys'
  * @param           T - type from which to extract prop types
  * @param {keyof T} K - optional key filter (only accepts common keys if `T` is a union)
  */
-export type PropType <T, K extends keyof T = keyof T> = T[K]
+export type PropType <T /*extends object*/, K extends keyof T = keyof T> = T[K]
 
 /**
  * Get prop types of all types in union `T` with optional key filter `K`
@@ -26,6 +26,6 @@ export type PropType <T, K extends keyof T = keyof T> = T[K]
  * @param           T - union of types from which to extract prop types
  * @param {keyof T} K - optional key filter (accepts keys from all types in union `T`)
  */
-export type PropTypeU <T, K extends KeysU<T> = KeysU<T>> = T extends any
+export type PropTypeU <T /*extends object*/, K extends KeysU<T> = KeysU<T>> = T extends any
 		? PropType<T, Extract<K, keyof T>>
 		: never
