@@ -1,4 +1,6 @@
 import { KeysU } from '../keys/Keys'
+import { Pick } from './Pick'
+
 /**
  * From `T` omit a set of properties `K`
  *
