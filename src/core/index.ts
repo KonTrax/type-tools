@@ -14,3 +14,5 @@ export type Primitive =
 		| string  | number | bigint
 		| boolean | symbol
 		| NIL
+
+export type Nullable <T> = T | NIL
