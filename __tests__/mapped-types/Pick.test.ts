@@ -37,7 +37,7 @@ namespace Single
 	;{TRU = EQ<EXP, Builtin<IN, keyof IN>>()
 		TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
-		type EXP = unknown
+		type EXP = {}
 		type IN  = unknown
 	}
 	/// CASE: Should operate identical to builtin version (Builtin) with non-union types

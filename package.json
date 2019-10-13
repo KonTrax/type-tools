@@ -34,10 +34,8 @@
   },
   "homepage": "https://github.com/KonTrax/type-tools#readme",
   "devDependencies": {
-    "@ktb/type-compare": "^0.1.3",
-    "@ktb/type-test": "^0.1.1",
-    "rimraf": "^2.6.2",
-    "tslint": "^5.12.1",
+    "@ktb/type-compare": "^0.1.4",
+    "@ktb/type-test": "^0.1.2",
     "typescript": "^3.4.1"
   }
 }

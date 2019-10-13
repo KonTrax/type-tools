@@ -30,7 +30,7 @@ let { TRU, FAL, equals: EQ } = expect
 	/// CASE: xxx
 	;{TRU = EQ<EXP, Target <IN, keyof IN>>()
 		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
-		type EXP = unknown
+		type EXP = {}
 		type IN  = unknown
 	}
 	/// CASE: xxx
