@@ -25,7 +25,7 @@ let { TRU, FAL } = expect
 	//=== TESTS - Special Types ===
 
 	;{type IN  = any
-		type EXP = {}
+		type EXP = unknown
 		;TRU = exp<IN>().equals<EXP>()}
 
 	;{type IN  = unknown

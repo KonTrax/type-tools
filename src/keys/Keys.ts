@@ -3,25 +3,11 @@ import { UnionToIntersection } from '../union/UnionToIntersection'
 /**
  * Extracts keys of type `T`
  *
- * - Fixes issue with keyof on union of types with only one member and no members in common
- *
- * @example
- * FAL = EQ<Expect, keyof IN>();
- * TRU = EQ<Actual, keyof IN>();
- *
- * type Expect = never;
- * type Actual = 'a' & 'b';
- * type IN  = { a :1 } | { b :1 };
+ * - `Keys` is now just an alias of `keyof` as previous issue was fixed in TS 3.6
  *
  * @param T - type from which to extract keys
  */
-export type Keys <T> = keyof T & (keyof T | null)
-
-//=== ALT A-2 ===
-// export type Keys <T> = [T & keyof T] extends [never] ? never : keyof T
-
-//=== ORIGINAL ===
-// export type Keys <T> = keyof T
+export type Keys <T> = keyof T
 
 /**
  * Extracts and merges keys of all types in union `T`

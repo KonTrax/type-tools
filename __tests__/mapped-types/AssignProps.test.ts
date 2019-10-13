@@ -16,8 +16,8 @@ let { TRU, FAL, equals: EQ } = expect
 
 	;{TRU = EQ<EXP, Target<IN_A, IN_B>>()
 		type EXP  = {
-			[x :string] :{} | 1
-			[x :number] :{}
+			[x :string] :unknown // {} | 1
+			[x :number] :unknown // {}
 		}
 		type IN_A = { a :1, b :1 }
 		type IN_B = any

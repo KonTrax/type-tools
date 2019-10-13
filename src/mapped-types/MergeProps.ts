@@ -23,8 +23,8 @@ import { KeysI } from '../keys/Keys'
 export type MergeProps <T /*extends object*/> =
 		[T] extends [never] ? {} :
 		{ [K in KeysI<T>]: T extends any ?
-				[keyof T] extends [never]                    ? never :
-				[T]       extends [{ [P1 in K]  :infer V1 }] ? V1    :
-				[T]       extends [{ [P2 in K] ?:infer V2 }] ? V2    : never
+				[keyof T] extends [never]                  ? never :
+				T         extends { [P1 in K]  :infer V1 } ? V1    :
+				T         extends { [P2 in K] ?:infer V2 } ? V2    : never
 			: never
 		}

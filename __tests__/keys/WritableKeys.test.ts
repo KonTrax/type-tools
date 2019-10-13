@@ -27,10 +27,11 @@ let { TRU, FAL, equals: EQ } = expect
 		type EXP = never
 		type IN  = unknown
 	}
-	;{TRU = EQ<EXP, Target <IN>>()
-		TRU = EQ<EXP, TargetU<IN>>()
-		type EXP = never
-		type IN  = never
+	;{TRU = EQ<EXP,  Target <IN>>()
+		TRU = EQ<EXPU, TargetU<IN>>()
+		type EXP  = PropertyKey
+		type EXPU = never
+		type IN   = never
 	}
 
 	//=== TESTS - General ===

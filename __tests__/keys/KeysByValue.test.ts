@@ -29,9 +29,10 @@ let { TRU, FAL, equals: EQ } = expect
 		type IN_A = unknown
 		type IN_B = any
 	}
-	;{TRU = EQ<EXP, Target <IN_A, IN_B>>()
-		TRU = EQ<EXP, TargetU<IN_A, IN_B>>()
-		type EXP  = never
+	;{TRU = EQ<EXP,  Target <IN_A, IN_B>>()
+		TRU = EQ<EXPU, TargetU<IN_A, IN_B>>()
+		type EXP  = PropertyKey
+		type EXPU = never
 		type IN_A = never
 		type IN_B = any
 	}

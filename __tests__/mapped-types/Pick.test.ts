@@ -5,6 +5,8 @@ import {
 	PickU as TargetU,
 } from '@src/mapped-types/Pick'
 
+import { KeysU } from '@src/keys/Keys'
+
 //==============================================================================
 //=== SETUP ===
 
@@ -41,9 +43,13 @@ namespace Single
 		type IN  = unknown
 	}
 	/// CASE: Should operate identical to builtin version (Builtin) with non-union types
-	;{TRU = EQ<EXP, Builtin<IN, keyof IN>>()
-		TRU = EQ<EXP, Target <IN, keyof IN>>()
-		TRU = EQ<EXP, TargetU<IN, keyof IN>>()
+	;{TRU = EQ<EXPB, Builtin<IN, keyof IN>>()
+		TRU = EQ<EXP,  Target <IN, keyof IN>>()
+		TRU = EQ<EXP,  TargetU<IN, KeysU<IN>>>()
+		type EXPB = {
+				[x :string]: never
+				[x :number]: never
+		}
 		type EXP  = {}
 		type IN   = never
 	}
