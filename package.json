@@ -1,7 +1,7 @@
 {
   "name": "@ktb/type-tools",
   "description": "Typescript type utilities",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "author": "KonTrax",
   "license": "ISC",
   "types": "dist/index.d.ts",
